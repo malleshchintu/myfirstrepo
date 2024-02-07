@@ -1,0 +1,6 @@
+Instance variables are used to maintain RandomGenerator and SecureRandom instances used in data generation. Therefore, to generate a random sequence of values or strings, you should use just one RandomDataImpl instance repeatedly.
+The "secure" methods are *much* slower. These should be used only when a cryptographically secure random sequence is required. A secure random sequence is a sequence of pseudo-random values which, in addition to being well-dispersed (so no subsequence of values is an any more likely than other subsequence of the the same length), also has the additional property that knowledge of values generated up to any point in the sequence does not make it any easier to predict subsequent values.
+When 
+
+
+
